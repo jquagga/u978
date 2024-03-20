@@ -34,7 +34,7 @@ RUN USR_LIB_ARCH=$(case ${TARGETPLATFORM} in \
     *)               echo ""        ;; esac) \
     && echo "USR_LIB_ARCH=$USR_LIB_ARCH" && \
     mkdir -p /copyusrlibs/${USR_LIB_ARCH}/SoapySDR/modules0.8/ && \
-    cp /usr/lib/${USR_LIB_ARCH}/SoapySDR/modules0.8/librtlsdrSupport.so /copyusrlibs/${USR_LIB_ARCH}/SoapySDR/modules0.8/librtlsdrSupport.so && \
+    cp /usr/lib/${USR_LIB_ARCH}/SoapySDR/modules0.8/librtlsdrSupport.so /copyusrlibs/${USR_LIB_ARCH}/SoapySDR/modules0.8/librtlsdrSupport.so
 
 FROM gcr.io/distroless/cc-debian12:nonroot@sha256:548d3e91231ffc84c1543da0b63e4063defc1f9620aa969e7f5abfafeb35afbe
 COPY --from=builder /usr/local/bin/dump978-fa /usr/local/bin/dump978-fa
