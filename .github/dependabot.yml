@@ -13,6 +13,6 @@ updates:
     schedule:
       interval: weekly
     commit-message:
-      prefix: ":seedling:"
+      prefix: ":seedling: "
     assignees:
       - "jquagga"
