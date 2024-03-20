@@ -6,7 +6,8 @@ RUN apt-get update && \
     git clone --depth 1 --branch v9.0 https://github.com/flightaware/dump978.git /app/git && \
     make -j$(nproc) dump978-fa && \
     mv dump978-fa /usr/local/bin && \
-    chmod +x /usr/local/bin/dump978-fa
+    chmod +x /usr/local/bin/dump978-fa && \
+    rm -rf /app/git
 
 USER 65532
 # Since distroless doesn't have a shell, we have to queue up the supporting libraries to copy
