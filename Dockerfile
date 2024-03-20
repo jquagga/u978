@@ -9,7 +9,7 @@ RUN apt-get update && \
     chmod +x /usr/local/bin/dump978-fa && \
     rm -rf /app/git
 
-USER 65532
+#USER 65532
 # Since distroless doesn't have a shell, we have to queue up the supporting libraries to copy
 # in the builder.  Put them in /libs and then copy all of /libs over in the final image.
 # WORKDIR /copylibs
