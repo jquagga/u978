@@ -18,7 +18,7 @@ RUN apt-get download --no-install-recommends $(apt-rdepends soapysdr-module-rtls
 WORKDIR /newroot
 RUN dpkg --unpack -R --force-all --root=/newroot /dpkg/
 
-FROM gcr.io/distroless/cc-debian12:nonroot@sha256:b9452f5cd004c1610d4056be70343a8a7ea3d46bcf0fda3ce90f1ed90e70989c
+FROM gcr.io/distroless/cc-debian12:nonroot@sha256:eeb716b8a36ecf37992cb8f1e716a4b5737c086fd3bcbb08b5c9588ad5c8a701
 COPY --from=builder /newroot /
 COPY --from=builder /usr/local/bin/dump978-fa /usr/local/bin/dump978-fa
 
